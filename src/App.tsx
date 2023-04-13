@@ -12,11 +12,11 @@ const PlyViewer = () => {
     const loader = new PLYLoader();
     loader.load(
       // './ply/airplane.ply',
-      // './ply/dolphins.ply',
-      './ply/230310_040clip.ply',
+      './ply/dolphins.ply',
+      // './ply/230310_040clip.ply',
       (geometry) => {
         // const material = new THREE.MeshStandardMaterial();
-        const material = new THREE.PointsMaterial({ vertexColors: true, size: 0.01,});
+        const material = new THREE.PointsMaterial({ vertexColors: true, size: 10.01,});
         // const mesh = new THREE.Mesh(geometry, material);
         // setModel(() => mesh);
         const particles = new THREE.Points(geometry, material);
