@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    20230410
+    <p>20230410: Infrastructure</p>
     <App />
   </React.StrictMode>
 );

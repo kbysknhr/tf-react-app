@@ -22,7 +22,9 @@ const PlyViewer = () => {
         const particles = new THREE.Points(geometry, material);
         setModel(() => particles);
       },
-      undefined,
+      (progress) => {
+        console.log("Loading progress:", progress);
+      },
       (error) => {
         console.error('Error loading PLY file:', error);
       }
@@ -30,17 +32,19 @@ const PlyViewer = () => {
   }, []);
 
   return (
-    <Canvas
-      camera={{ position: [3, 0.15, -100], fov: 75, near: 0.1, far: 1000}}
-      onCreated={({ camera }) => {
-        camera.lookAt(0, -0.1, 0);
-      }}
-    >
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      {model && <primitive object={model} />}
-      <OrbitControls />
-    </Canvas>
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <Canvas
+        camera={{ position: [3, 0.15, -10], fov: 75, near: 0.1, far: 1000}}
+        onCreated={({ camera }) => {
+          camera.lookAt(0, -0.1, 0);
+        }}
+      >
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        {model && <primitive object={model} />}
+        <OrbitControls />
+      </Canvas>
+    </div>
   );
 };
 
