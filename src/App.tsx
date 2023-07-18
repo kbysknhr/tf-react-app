@@ -13,7 +13,7 @@ const PlyViewer = () => {
     loader.load(
       // './ply/airplane.ply',
       // './ply/dolphins.ply',
-      './ply/230310_040clip.ply',
+      './ply/230530_003clip.ply',
       (geometry) => {
         // const material = new THREE.MeshStandardMaterial();
         const material = new THREE.PointsMaterial({ vertexColors: true, size: 0.01,});
