@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <p>20230310: Infrastructure</p>
+    <p>20230530: Infrastructure WS2</p>
     <App />
   </React.StrictMode>
 );

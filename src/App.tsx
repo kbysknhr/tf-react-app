@@ -20,6 +20,7 @@ const PlyViewer = () => {
         // const mesh = new THREE.Mesh(geometry, material);
         // setModel(() => mesh);
         const particles = new THREE.Points(geometry, material);
+        particles.rotation.x = 180;
         setModel(() => particles);
       },
       (progress) => {
